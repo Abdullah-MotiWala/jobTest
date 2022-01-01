@@ -1,0 +1,74 @@
+div.header {
+  background-color: #f7e223;
+}
+.navDown {
+  width: 10px;
+}
+.nav-item {
+  height: 100%;
+}
+.nav-item:hover {
+  box-shadow: #d3d3d3 10px 10px 10px;
+}
+.iconSide {
+  width: 20px;
+}
+.textBold {
+  font-weight: bold;
+}
+nav:nth-child(2) {
+  color: #000 !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.round {
+  width: 6rem;
+}
+.shop {
+  background-color: #f2f2f2;
+}
+.prodUprText {
+  font-size: 0.8rem;
+}
+.star {
+  width: 1rem;
+}
+.ratingNum::before {
+  background: url("./images/star.png") left top no-repeat;
+  /* background-size: 1rem; */
+}
+.ratingNum {
+  color: #ffc107;
+  font-weight: bold;
+  line-height: 0;
+}
+li:hover{
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+.popCat {
+  background-color: #fff;
+  position: fixed;
+  top: 115px;
+  display: none;
+  height: 70vh;
+  width: 90vw;
+}
+
+/* .carSpan1 {
+  width: 50vw !important;
+} */
+/* .carImage {
+  width: 100% !important;
+  height: 100% !important;
+} */
+/* .carousel-indicators {
+  position: relative;
+  top: 213px;
+} */
+.sideImg {
+  width: 50%;
+}
