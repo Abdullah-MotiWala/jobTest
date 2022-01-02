@@ -8,12 +8,19 @@
   <title>Online Shopping UAE | Fasihion,clothes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
 </head>
 
 <body>
+  <!-- loader -->
+  <div class="bgScreen">
+    <div class="loader"></div>
+</div>
   <!-- header -->
   <div class="header d-flex justify-content-around align-items-center w-100">
+
     <img src="./images/noon-black-logo.svg" alt="" />
 
     <div class="dropdown">
@@ -34,10 +41,13 @@
       </button>
     </div>
 
-    <input type="text" class="searchBar w-50 rounded-3 h-75 border-0 p-2" placeholder="What you are looking for ?" />
 
-    <div class="sideText d-flex align-items-center">
-      <div class="
+    <input type="text" class="searchBar w-50 rounded-3 h-75 border-0 p-2"
+      placeholder="What you are looking for ?" />
+
+
+  <div class="sideText d-flex align-items-center">
+    <div class="
             signIn
             sideInner
             mx-2
@@ -45,10 +55,10 @@
             d-flex
             align-items-center
           ">
-        العربية
-      </div>
-      <div class="vr"></div>
-      <div class="
+      العربية
+    </div>
+    <div class="vr"></div>
+    <div class="
             signIn
             sideInner
             mx-3
@@ -56,18 +66,36 @@
             d-flex
             align-items-center
           ">
-        Sign In <img src="./icons/user.png" alt="" class="iconSide mx-2" />
-      </div>
-      <div class="vr"></div>
-      <div class="cart sideInner mx-3 font-weight-bold d-flex align-items-center">
-        Cart
-        <img src="./icons/shopping-cart.png" alt="" class="iconSide mx-2" />
-      </div>
+      Sign In <img src="./icons/user.png" alt="" class="icon mx-2" />
+    </div>
+    <div class="vr"></div>
+    <div class="cart sideInner mx-3 font-weight-bold d-flex align-items-center">
+      Cart
+      <img src="./icons/shopping-cart.png" alt="" class="icon mx-2" />
     </div>
   </div>
+  </div>
+
+
+  <!-- resHeader -->
+  <button class="
+dropBtnRes
+btn btn-secondary
+bg-opacity-10 bg-white
+border-0
+align-items-center
+" type="button" aria-expanded="false">
+    <img src="./images/flag.svg" alt="" class="mx-2 " />
+    <div class="del align-items-start text-black fontSize">
+      Delivered To
+      <strong>Dubai</strong>
+    </div>
+    <img src="./icons/arrow-down-sign-to-navigate.png" class="navDown mx-2 icon" alt="" />
+  </button>
 
   <!-- navbar -->
   <nav class="
+  mobNav
         navbar navbar-expand-lg navbar-light
         w-100
         d-flex
@@ -75,7 +103,7 @@
       ">
     <div class="collapse navbar-collapse textBold" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto px-2 mx-3">
-        <li class="nav-item dropdown dropCat"  onclick="popOpen()">
+        <li class="nav-item dropdown dropCat" onclick="popOpen()">
           <a class="nav-link dropdown-toggle text-primary text-uppercase " href="#" role="button" aria-haspopup="true"
             aria-expanded="false">
             All Categories
@@ -112,13 +140,36 @@
       </ul>
     </div>
   </nav>
+
+  <!-- responsive navbar -->
+  <div class="resNav d-flex justify-content-around align-items-center p-3">
+    <div class="d-flex flex-column align-items-center align-items-center">
+      <img src="./icons/home.png" alt="" class="icon">Home
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <img src="./icons/categories-v2-inactive.svg" alt="" class="icon">Categories
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <img src="./icons/deals-box@3x.png" alt="" class="icon">Clearance
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <img src="./icons/user.png" alt="" class="icon">My Account
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <img src="./icons/shopping-cart.png" alt="" class="icon">Cart
+    </div>
+  </div>
+
   <!-- toggle -->
-  <img src="./images/en_dk-toggle.gif" alt="" class="w-100" />
+  <div class="toggle">
+  <img src="./images/en_dk-toggle.gif" alt="" class="w-100 toggleImg" />
+</div>
+
   <!-- carosuel + side image-->
-  <div class="d-flex">
+  <div class="row no-gutters">
     <!-- carosoul -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+    <div id="carouselExampleCaptions" class="carousel slide col-sm-12 col-md-8" data-bs-ride="carousel">
+      <div class="carousel-indicators h-25">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
@@ -128,13 +179,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/en_dk_uae-hero-clp.png" class="d-block w-100" alt="..." />
+          <img src="./images/en_dk_uae-hero-clp.png" class="d-block w-100 carImg" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="./images/en_dk_uae-clearance-01.gif" class="d-block w-100" alt="..." />
+          <img src="./images/en_dk_uae-clearance-01.gif" class="d-block w-100 carImg" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="./images/en_dk_uae-slider-01.png" class="d-block w-100" alt="..." />
+          <img src="./images/en_dk_uae-slider-01.png" class="d-block w-100 carImg" alt="..." />
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -149,14 +200,16 @@
       </button>
     </div>
     <!-- side image -->
-    <div class="carSpan2 d-flex">
+    <div class="carSpan2 d-flex col-sm-12 col-md-4">
       <img src="./images/sideImage1.png" class="sideImg" alt="" />
       <img src="./images/sideImage2.png" class="sideImg" alt="" />
     </div>
   </div>
 
+
+
   <!-- rounds portion -->
-  <div class="d-flex">
+  <div class="d-flex flex-wrap">
     <img src="./images/round2.png" class="round m-2" alt="" />
     <img src="./images/round1.png" class="round m-2" alt="" />
     <img src="./images/round3.png" class="round m-2" alt="" />
@@ -173,18 +226,284 @@
 
   <!--shop portion  -->
   <div class="shop py-4">
-    <div class="products d-flex justify-content-around">
-      <img src="./images/product1.png" alt="" class="productImage" />
-      <img src="./images/product2.png" alt="" class="productImage" />
-      <img src="./images/product3.png" alt="" class="productImage" />
-      <img src="./images/product4.png" alt="" class="productImage" />
+    <div class="products d-flex justify-content-around flex-wrap">
+      <img src="./images/product1.png" alt="" class="productImage my-2" />
+      <img src="./images/product2.png" alt="" class="productImage my-2" />
+      <img src="./images/product3.png" alt="" class="productImage my-2" />
+      <img src="./images/product4.png" alt="" class="productImage my-2" />
     </div>
 
-    <div class="h2 mx-5">
+    <div class="h2 mx-5 mt-2">
       Recommended For You
     </div>
-    <div class="prodCard d-flex justify-content-around">
-      <div class="card" style="width: 12rem;">
+    <!-- swipper -->
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 10rem;">
+            <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
+              style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
+            <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-truncate prodUprText">Apple iPhone 13 Pro <br>Max 256GB Sierra Bl</p>
+              <p class="card-text">AED <strong>5069.00</strong></p>
+              <p class="card-text prodUprText"><del> AED 5069.00 </del></p>
+              <div class="arr">
+                Arrives
+                <p class="card-text arr"><strong>Today - Tommorrow</strong></p>
+              </div>
+              <div class="rank d-flex justify-content-between align-items-center">
+                <img src="./images/fulfilment_express_v2-en.svg" alt="" class="w-25" />
+
+                <div class="ratings d-flex align-items-center">
+                  <img src="./images/star.png" class="star mx-2" alt="">
+                  <div class="ratingNum">4.2</div>
+                  <div>(5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+    <!-- swipper end -->
+    <!-- <div class="prodCard d-flex justify-content-around">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
@@ -208,7 +527,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate h-50"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/produc2.jpg" alt="Card image cap">
@@ -232,7 +551,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
@@ -256,7 +575,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
@@ -280,7 +599,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
@@ -304,7 +623,7 @@
         </div>
       </div>
 
-      <div class="card" style="width: 12rem;">
+      <div class="card" style="width: 10rem;">
         <div class="cardBtn border border-primary w-100 text-primary text-truncate"
           style="font-size: 0.75rem; font-weight: bold;"> GET 100% AED OFF | USE CODE : SALE PRIZE</div>
         <img class="card-img-top" src="./images/prodCar.webp" alt="Card image cap">
@@ -327,8 +646,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
+
+    <!-- categories popup -->
     <div class="popCat w-75 mx-4" id="popCatDiv">
       <span class="mx-5">
         <ul class="cat">
@@ -362,11 +683,13 @@
         </ul>
       </span>
     </div>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
+
 </body>
 
 </html>
